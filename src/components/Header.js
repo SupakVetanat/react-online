@@ -1,5 +1,7 @@
 import React from 'react'
-import Logo from './Logo'
+import Button from '../styles/button/Button'
+import Title from '../styles/title/Title'
+//import Logo from './Logo'
 
 const Header = () => {
 
@@ -10,7 +12,7 @@ const Header = () => {
     const showMessage = () => {
         return companyName+".com"
     }
-    const isLogin = false;
+    //const isLogin = false;
     const showMe = ()=>{
         alert("hello React")
     }
@@ -23,6 +25,7 @@ const Header = () => {
 
     return (
         <div>
+            <Title>Project React</Title>
             <h1>Hello {showMessage()}</h1>
             {/* {companyAddress} */}
             {/* {number*2} */}
@@ -43,8 +46,14 @@ const Header = () => {
             {
                 isLogin ? <Logo/> : <p>Unlock</p>
             } */}
-            <button onClick={showMe}>Click Me</button>
-
+            <button onClick={showMe}>Click Me!</button>
+            <Button onClick={showMe} Keyword="correct" >
+                Click Me!
+            </Button>
+            <Button onClick={showMe}>
+                Click Me!
+            </Button>
+            
             <ul>
             {
                 products.map(
