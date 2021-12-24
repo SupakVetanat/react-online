@@ -11,6 +11,7 @@ import {
 import AboutPage from "./pages/AboutPage";
 import ProductPage from "./pages/ProductPage";
 import DetailPage from "./pages/DetailPage";
+import ContactPage from "./pages/ContactPage";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path='/product'><ProductPage/></Route>
           <Route path='/about'><AboutPage/></Route>
           <Route path='/detail'><DetailPage/></Route>
+          <Route path='/contact'><ContactPage/></Route>
         </Switch>
         <Footer/>
     </Router>
