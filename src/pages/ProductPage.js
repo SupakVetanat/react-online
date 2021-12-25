@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import { Table,Image,Badge,Spinner,Button} from "react-bootstrap"
 import {BsMouseFill} from'react-icons/bs'
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const ProductPage = () => {
 
@@ -72,7 +73,11 @@ const ProductPage = () => {
                                 <td><Badge variant="success">{p.view}</Badge>{' '}</td>
                                 <td><Image src={p.picture} rounded width={50}/></td>
                                 
-                                <td><Button href="/detail" variant="outline-primary">Click <BsMouseFill color='primary'/></Button>{' '}</td>
+                                <td>
+                                    <Link to={`/detail/${p.id}/title/${p.title}`}>
+                                    <Button  variant="outline-primary">Click <BsMouseFill color='primary'/></Button>{' '}
+                                    </Link>
+                                    </td>
                             </tr>
                             
                         )

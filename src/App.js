@@ -22,7 +22,7 @@ function App() {
           <Route exact path='/'><HomePage/></Route>
           <Route path='/product'><ProductPage/></Route>
           <Route path='/about'><AboutPage/></Route>
-          <Route path='/detail'><DetailPage/></Route>
+          <Route path='/detail/:id/title/:title'><DetailPage/></Route>
           <Route path='/contact'><ContactPage/></Route>
         </Switch>
         <Footer/>
