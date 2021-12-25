@@ -75,7 +75,7 @@ const ProductPage = () => {
                                 
                                 <td>
                                     <Link to={`/detail/${p.id}/title/${p.title}`}>
-                                    <Button  variant="outline-primary">Click <BsMouseFill color='primary'/></Button>{' '}
+                                    <Button  variant="outline-primary">Click <BsMouseFill color='primary'/></Button>
                                     </Link>
                                     </td>
                             </tr>
