@@ -1,9 +1,12 @@
 import React from 'react'
 import { Table,Spinner,Button} from 'react-bootstrap';
 import axios from 'axios';
-import {BiMessageSquareEdit,BiMessageX} from "react-icons/bi"
+import {BsPencilSquare,BsTrash} from "react-icons/bs"
+import {Link,useHistory} from 'react-router-dom'
 
 const IndexPage = () => {
+    const history = useHistory();
+
     const [Category,setCategory] = React.useState([])
     const [loading,setLoading] = React.useState([false])
     const [error,setError] = React.useState()
@@ -48,6 +51,7 @@ const IndexPage = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-12 mt-4">
+              <Button variant='success' className="mb-3" onClick={() => {history.push('/category/create')}}>+ Add New Category</Button>
             <h2>Category</h2>
             <Table striped bordered hover>
               <thead>
@@ -64,8 +68,8 @@ const IndexPage = () => {
                       <td>{c.id}</td>
                       <td>{c.name}</td>
                       <td>
-                          <Button variant="outline-primary">Edit <BiMessageSquareEdit className="mr-1" /></Button>
-                          <Button className="ml-2" variant="outline-danger">Delete <BiMessageX className="mr-1" color="red"/></Button>
+                          <Button variant="outline-primary">Edit <BsPencilSquare className="mr-1" /></Button>
+                          <Button className="ml-2" variant="outline-danger">Delete <BsTrash className="mr-1" color="red"/></Button>
                       </td>
                     </tr>
                   );
